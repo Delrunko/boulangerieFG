@@ -1,0 +1,349 @@
+<!doctype html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>La carte · Boulangerie, le goût du vrai</title>
+    <meta
+      name="description"
+      content="Pains, viennoiseries et douceurs : la carte de la boulangerie."
+    />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E🌾%3C/text%3E%3C/svg%3E"
+    />
+    <script>
+      document.documentElement.classList.add("js");
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,500;0,9..144,700;1,9..144,500&family=Figtree:wght@400;600&family=Dancing+Script:wght@700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="Assets/Style/style.css" />
+  </head>
+  <body>
+    <div class="curtain" aria-hidden="true"><span>Boulangerie</span></div>
+    <header class="nav">
+      <a href="index.html" class="logo"
+        >Boulangerie<small>Le goût du vrai</small></a
+      >
+      <nav>
+        <a href="index.html">Accueil</a
+        ><a href="produits.html" class="cur">La carte</a
+        ><a href="rayons.html">Nos rayons</a
+        ><a href="histoire.html">Notre histoire</a
+        ><a href="commander.html">Commander</a>
+      </nav>
+      <a class="btn" href="commander.html">Commander</a>
+      <button class="burger" aria-expanded="false">Menu</button>
+    </header>
+    <a class="btn fab" href="commander.html">Commander</a>
+    <main>
+      <section class="page-title">
+        <p class="eyebrow">La carte</p>
+        <h1 data-split>Ce qu’on cuit pour vous</h1>
+      </section>
+      <section style="padding-top: 0">
+        <div class="tabs rv">
+          <button class="on" data-f="all">Tout</button
+          ><button data-f="Pains">Pains</button
+          ><button data-f="Viennoiseries">Viennoiseries</button
+          ><button data-f="Sucré">Sucré</button
+          ><button data-f="Gâteaux">Gâteaux</button
+          ><button data-f="Biscuits">Biscuits</button>
+        </div>
+        <ul class="menu">
+          <li data-c="Pains" data-img="Assets/img/pain (3).jpg">
+            <div class="row">
+              <span class="nm">Baguette tradition</span><i class="dots"></i
+              ><span class="pr">150 FCFA</span>
+            </div>
+            <p>Croûte craquante, mie alvéolée.</p>
+          </li>
+          <li data-c="Pains" data-img="Assets/img/pain (2).jpg">
+            <div class="row">
+              <span class="nm">Pain de campagne</span><i class="dots"></i
+              ><span class="pr">1000 FCFA</span>
+            </div>
+            <p>Au levain, pour tenir toute la semaine.</p>
+          </li>
+          <li data-c="Pains" data-img="Assets/img/pain (1).jpg">
+            <div class="row">
+              <span class="nm">Pain complet</span><i class="dots"></i
+              ><span class="pr">700 FCFA</span>
+            </div>
+            <p>Dense, parfumé, riche en grains.</p>
+          </li>
+          <li data-c="Pains" data-img="Assets/img/579768152074396743.jpg">
+            <div class="row">
+              <span class="nm">Pain aux céréales</span><i class="dots"></i
+              ><span class="pr">800 FCFA</span>
+            </div>
+            <p>Un mélange de graines croquantes.</p>
+          </li>
+          <li data-c="Viennoiseries" data-img="Assets/img/Flaky croissants.jpg">
+            <div class="row">
+              <span class="nm">Croissant pur beurre</span><i class="dots"></i
+              ><span class="pr">300 FCFA</span>
+            </div>
+            <p>Feuilleté, doré, fondant.</p>
+          </li>
+          <li data-c="Viennoiseries" data-img="Assets/img/3025924735999771.jpg">
+            <div class="row">
+              <span class="nm">Pain au chocolat</span><i class="dots"></i
+              ><span class="pr">350 FCFA</span>
+            </div>
+            <p>Deux barres de chocolat noir.</p>
+          </li>
+          <li data-c="Viennoiseries" data-img="Assets/img/1124844444407238715.jpg">
+            <div class="row">
+              <span class="nm">Pain aux raisins</span><i class="dots"></i
+              ><span class="pr">350 FCFA</span>
+            </div>
+            <p>Crème pâtissière et raisins.</p>
+          </li>
+          <li data-c="Sucré" data-img="Assets/img/3025924735999771.jpg">
+            <div class="row">
+              <span class="nm">Brioche</span><i class="dots"></i
+              ><span class="pr">400 FCFA</span>
+            </div>
+            <p>Moelleuse, légèrement sucrée.</p>
+          </li>
+          <li data-c="Sucré" data-img="Assets/img/client.jpg">
+            <div class="row">
+              <span class="nm">Chausson aux pommes</span><i class="dots"></i
+              ><span class="pr">400 FCFA</span>
+            </div>
+            <p>Pommes fondantes, pâte feuilletée.</p>
+          </li>
+          <li data-c="Sucré" data-img="Assets/img/Crema rapida de mascarpone cu lapte condensat, pentru torturi si prajituri.jpg">
+            <div class="row">
+              <span class="nm">Éclair</span><i class="dots"></i
+              ><span class="pr">500 FCFA</span>
+            </div>
+            <p>Crème onctueuse, glaçage brillant.</p>
+          </li>
+          <li data-c="Sucré" data-img="Assets/img/3025924735999771.jpg">
+            <div class="row">
+              <span class="nm">Beignet glacé</span><i class="dots"></i
+              ><span class="pr">400 FCFA</span>
+            </div>
+            <p>Moelleux, glaçage rose et pépites de sucre.</p>
+          </li>
+          <li data-c="Gâteaux" data-img="Assets/img/Opera Cake Recipe – Cooking with Lazher.jpg">
+            <div class="row">
+              <span class="nm">Gâteau au chocolat (part)</span
+              ><i class="dots"></i><span class="pr">800 FCFA</span>
+            </div>
+            <p>Deux étages de chocolat, crème légère.</p>
+          </li>
+          <li data-c="Gâteaux" data-img="Assets/img/672936369353283134.jpg">
+            <div class="row">
+              <span class="nm">Tarte aux fraises</span><i class="dots"></i
+              ><span class="pr">1000 FCFA</span>
+            </div>
+            <p>Pâte sablée, crème, fraises fraîches.</p>
+          </li>
+          <li data-c="Gâteaux" data-img="Assets/img/Cake Marbré au Chocolat très facile _ la meilleure recette.jpg">
+            <div class="row">
+              <span class="nm">Cupcake</span><i class="dots"></i
+              ><span class="pr">500 FCFA</span>
+            </div>
+            <p>Glaçage onctueux, décor du jour.</p>
+          </li>
+          <li data-c="Biscuits" data-img="Assets/img/Cookie Recheado_ O Doce da Moda para Fazer Renda Extra.jpg">
+            <div class="row">
+              <span class="nm">Cookie aux pépites</span><i class="dots"></i
+              ><span class="pr">300 FCFA</span>
+            </div>
+            <p>Croustillant dehors, tendre dedans.</p>
+          </li>
+          <li data-c="Biscuits" data-img="Assets/img/579768152074396743.jpg">
+            <div class="row">
+              <span class="nm">Sablé au beurre (sachet)</span
+              ><i class="dots"></i><span class="pr">600 FCFA</span>
+            </div>
+            <p>Fondant, pour le thé ou le café.</p>
+          </li>
+          <li data-c="Biscuits" data-img="Assets/img/1146588386412108709.jpg">
+            <div class="row">
+              <span class="nm">Creme</span><i class="dots"></i
+              ><span class="pr">400 FCFA</span>
+            </div>
+            <p>Coque lisse, cœur crémeux.</p>
+          </li>
+        </ul>
+        <div class="cta rv" style="margin-top: 3rem">
+          <a class="btn" href="commander.html">Commander</a>
+        </div>
+      </section>
+      <section class="paper">
+        <p class="eyebrow rv">À la une</p>
+        <h2 data-split>Les douceurs de la vitrine</h2>
+        <div class="cards">
+          <a class="gc" href="produits.html"
+            ><img
+              src="Assets/img/672936369353283134.jpg"
+              alt="Gâteaux"
+              width="400"
+              height="500"
+              loading="lazy"
+            />
+            <div>
+              <h3>Gâteaux</h3>
+              <p>
+                Chocolat, crème, décors : pour les anniversaires et les petits
+                bonheurs.
+              </p>
+            </div></a
+          ><a class="gc" href="produits.html"
+            ><img
+              src="Assets/img/3025924735999771.jpg"
+              alt="Biscuits & cookies"
+              width="400"
+              height="500"
+              loading="lazy"
+            />
+            <div>
+              <h3>Biscuits & cookies</h3>
+              <p>Pépites, sablés au beurre : croquants à souhait.</p>
+            </div></a
+          ><a class="gc" href="produits.html"
+            ><img
+              src="Assets/img/Flaky croissants.jpg"
+              alt="Macarons"
+              width="400"
+              height="500"
+              loading="lazy"
+            />
+            <div>
+              <h3>Macarons</h3>
+              <p>Pistache, framboise, vanille : coques lisses, cœur fondant.</p>
+            </div></a
+          ><a class="gc" href="produits.html"
+            ><img
+              src="Assets/img/pain (3).jpg"
+              alt="Tartes"
+              width="400"
+              height="500"
+              loading="lazy"
+            />
+            <div>
+              <h3>Tartes</h3>
+              <p>Pâte sablée dorée et fruits de saison.</p>
+            </div></a
+          ><a class="gc" href="produits.html"
+            ><img
+              src="Assets/img/Saveurs authentiques de la boulangerie.png"
+              alt="Cupcakes"
+              width="400"
+              height="500"
+              loading="lazy"
+            />
+            <div>
+              <h3>Cupcakes</h3>
+              <p>Un glaçage onctueux, un décor différent chaque jour.</p>
+            </div></a
+          ><a class="gc" href="produits.html"
+            ><img
+              src="Assets/img/pain au chocolat et croissant.jpg"
+              alt="Beignets glacés"
+              width="400"
+              height="500"
+              loading="lazy"
+            />
+            <div>
+              <h3>Beignets glacés</h3>
+              <p>Moelleux et sucrés, parfaits avec un café.</p>
+            </div></a
+          >
+        </div>
+      </section>
+      <section class="center">
+        <p class="eyebrow rv">Une occasion à fêter ?</p>
+        <h2 data-split>Un gâteau pour la fête</h2>
+        <p
+          class="rv"
+          style="max-width: 34rem; margin: 0 auto 2rem; opacity: 0.85"
+        >
+          Anniversaire, baptême, mariage : dites-nous la date et le nombre de
+          personnes, on vous répond sur WhatsApp.
+        </p>
+        <div class="cta rv">
+          <a
+            class="btn"
+            href="https://wa.me/237600000000"
+            target="_blank"
+            rel="noopener"
+            >Nous écrire</a
+          >
+        </div>
+      </section>
+      <section class="paper">
+        <p class="eyebrow rv">Bon à savoir</p>
+        <h2 data-split>Avant de choisir</h2>
+        <div class="faq">
+          <details class="rv">
+            <summary>Les produits sont-ils frais ?</summary>
+            <p>Oui : fournées du matin, vitrine renouvelée chaque jour.</p>
+          </details>
+          <details class="rv">
+            <summary>J’ai une allergie, que faire ?</summary>
+            <p>
+              Précisez-le dans la remarque de votre commande ou demandez-nous
+              directement avant de choisir.
+            </p>
+          </details>
+          <details class="rv">
+            <summary>Où se trouve la boulangerie ?</summary>
+            <p>
+              À Batié, Cameroun.
+              <a
+                href="https://www.google.com/maps/search/?api=1&amp;query=Bati%C3%A9%2C+Cameroun"
+                target="_blank"
+                rel="noopener"
+                >Ouvrir sur la carte</a
+              >.
+            </p>
+          </details>
+        </div>
+      </section>
+      <div class="pv" aria-hidden="true">
+        <img src="Assets/img/vitrine.jpg" alt="" />
+      </div>
+    </main>
+    <div class="wax" aria-hidden="true"></div>
+    <footer>
+      <div>
+        <a class="logo" href="index.html"
+          >Boulangerie<small>Le goût du vrai</small></a
+        >
+      </div>
+      <div>
+        <b>Explorer</b><a href="produits.html">La carte</a
+        ><a href="rayons.html">Nos rayons</a
+        ><a href="histoire.html">Notre histoire</a
+        ><a href="commander.html">Commander</a>
+      </div>
+      <div>
+        <b>Contact</b
+        ><a href="https://wa.me/237600000000" target="_blank" rel="noopener"
+          >WhatsApp</a
+        ><a href="tel:+237600000000">+237 6 00 00 00 00</a
+        ><span>Batié, Cameroun </span><span> Ouvert tous les jours</span>
+      </div>
+      <small>© 2026 Boulangerie · Batié, Cameroun. Tous droits réservés.</small>
+    </footer>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"
+      defer
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"
+      defer
+    ></script>
+    <script src="Assets/JS/main.js" defer></script>
+  </body>
+</html>

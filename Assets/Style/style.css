@@ -1,0 +1,201 @@
+:root{--ink:#14110e;--cream:#f6efe2;--sun:#f2c230;--leaf:#1f4d36;--clay:#c9742b;--serif:"Fraunces",Georgia,serif;--script:"Dancing Script",cursive;--sans:"Figtree",system-ui,sans-serif}
+*{box-sizing:border-box;margin:0}
+html{scroll-behavior:smooth}
+body{background:var(--ink);color:var(--cream);font:400 1.05rem/1.6 var(--sans);overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img{display:block;max-width:100%}
+.curtain{position:fixed;inset:0;z-index:100;background:var(--sun);color:var(--ink);display:grid;place-items:center;pointer-events:none;transform:translateY(-100%)}
+.js .curtain{transform:none}
+.curtain span{font:700 clamp(2.4rem,7vw,4.5rem) var(--script)}
+.btn{display:inline-block;padding:.9rem 1.7rem;border-radius:99px;background:var(--sun);color:var(--ink);font-weight:600;border:0;cursor:pointer;font-size:1rem;transition:background .25s}
+.btn:hover{background:#ffd75a}
+.btn.alt{background:transparent;color:inherit;box-shadow:inset 0 0 0 2px currentColor}
+.btn.alt:hover{background:var(--cream);color:var(--ink)}
+.cta{display:flex;gap:1rem;flex-wrap:wrap}
+/* nav */
+.nav{position:fixed;inset:0 0 auto;z-index:30;display:flex;align-items:center;justify-content:space-between;padding:1rem 5vw;transition:background .3s,padding .3s}
+.nav.on{background:rgba(20,17,14,.92);backdrop-filter:blur(8px);padding-block:.6rem}
+.logo{font:700 2rem/1 var(--script)}
+.logo small{display:block;font:600 .62rem var(--sans);letter-spacing:.2em;text-transform:uppercase;color:var(--sun);margin-top:.2rem}
+.nav nav{display:flex;gap:2rem;font-weight:600}
+.nav nav a:hover,.nav nav a.cur{color:var(--sun)}
+.burger{display:none;background:none;border:0;color:inherit;font:600 1rem var(--sans);cursor:pointer}
+@media(max-width:800px){
+  .burger{display:block}
+  .nav nav{position:fixed;inset:0;background:var(--ink);flex-direction:column;justify-content:center;align-items:center;gap:1.4rem;font:700 2.2rem var(--serif);transform:translateY(-100%);transition:transform .5s cubic-bezier(.7,0,.2,1);z-index:-1}
+  .nav.open nav{transform:none}
+  .nav>.btn{display:none}
+}
+.fab{display:none}
+@media(max-width:800px){.fab{display:block;position:fixed;left:5vw;right:5vw;bottom:1rem;z-index:25;text-align:center;box-shadow:0 10px 30px rgba(0,0,0,.5)}}
+/* typo */
+.serif{font-family:var(--serif)}
+.eyebrow{font-weight:600;letter-spacing:.16em;text-transform:uppercase;font-size:.78rem;color:var(--sun);margin-bottom:1rem}
+h1,h2{font-family:var(--serif);font-weight:700;letter-spacing:-.02em}
+h1{font-size:clamp(3.2rem,9vw,8rem);line-height:.93}
+h2{font-size:clamp(2.2rem,5.4vw,4.6rem);line-height:1}
+em{font-style:italic;color:var(--sun)}
+.w{display:inline-block;overflow:hidden;vertical-align:top;padding-bottom:.1em}
+.w>span{display:inline-block}
+/* hero */
+.hero{min-height:100svh;display:grid;grid-template-columns:1.05fr .95fr;align-items:center;gap:3rem;padding:7rem 5vw 4rem}
+.hero .lead{max-width:32rem;margin:1.6rem 0 2rem;font-size:1.15rem;opacity:.9}
+.arch{position:relative;width:min(100%,500px);justify-self:center}
+.arch .shape{border-radius:999px 999px 24px 24px;overflow:hidden;aspect-ratio:3/4;max-height:76vh}
+.arch img{width:100%;height:100%;object-fit:cover;object-position:65% 20%;transform:scale(1.12)}
+.badge{position:absolute;left:-2.5rem;bottom:2.5rem;width:140px;height:140px}
+.badge svg{width:100%;height:100%;overflow:visible}
+.badge text{font:700 11.5px var(--sans);letter-spacing:.12em;fill:var(--ink)}
+.badge::before{content:"";position:absolute;inset:0;border-radius:50%;background:var(--sun)}
+.badge svg{position:relative}
+@media(max-width:860px){.hero{grid-template-columns:1fr;padding-top:6.5rem}.arch{width:min(78%,360px);order:-1}.badge{left:-1rem;width:110px;height:110px}}
+/* bandes */
+.wax{height:34px;background:radial-gradient(circle at 25% 50%,var(--ink) 0 21%,transparent 22%),radial-gradient(circle at 75% 50%,var(--leaf) 0 21%,transparent 22%),radial-gradient(circle at 50% 50%,#fff3 0 9%,transparent 10%),var(--sun);background-size:68px 34px}
+.mq{background:var(--sun);color:var(--ink);overflow:hidden;white-space:nowrap;padding:.9rem 0}
+.mq-track{display:inline-flex}
+.mq span{font:700 clamp(1.8rem,3.6vw,3rem) var(--script);padding-right:1.8rem}
+.mq b{padding-right:1.8rem;font-weight:400}
+/* galerie horizontale */
+.hg{height:100vh;overflow-x:auto;display:flex;align-items:center;background:var(--ink)}
+.hg-track{display:flex;gap:4vw;padding:0 6vw;align-items:center;will-change:transform}
+.hg-intro{flex:0 0 min(34vw,460px)}
+.hg-intro p{margin-top:1rem;opacity:.8}
+.hg figure{flex:0 0 min(30vw,400px);position:relative;border-radius:22px;overflow:hidden}
+.hg figure:nth-child(odd){transform:translateY(-4vh)}
+.hg img{width:100%;aspect-ratio:4/5;object-fit:cover}
+.hg figcaption{position:absolute;inset:auto 0 0;padding:3rem 1.4rem 1.2rem;background:linear-gradient(transparent,rgba(0,0,0,.8));font:700 1.8rem var(--script)}
+@media(max-width:800px){.hg{height:auto;display:block;padding:4rem 5vw}.hg-track{flex-direction:column;padding:0;align-items:stretch;gap:1.5rem}.hg-intro,.hg figure{flex:none}.hg figure:nth-child(odd){transform:none}}
+/* sections */
+section{padding:clamp(4rem,10vw,9rem) 5vw}
+.paper{background:var(--cream);color:var(--ink)}
+.paper em{color:var(--clay)}
+.paper .eyebrow{color:var(--clay)}
+.center{text-align:center}
+.center h2{max-width:16ch;margin:0 auto 2rem}
+.center .cta{justify-content:center}
+.page-title{padding-top:9rem;padding-bottom:3rem}
+.page-title h1{max-width:12ch}
+/* carte */
+.tabs{display:flex;gap:.6rem;flex-wrap:wrap;margin:2rem 0}
+.tabs button{padding:.55rem 1.2rem;border-radius:99px;border:2px solid rgba(246,239,226,.35);background:none;color:inherit;font:600 .95rem var(--sans);cursor:pointer;transition:.25s}
+.tabs button.on,.tabs button:hover{background:var(--sun);border-color:var(--sun);color:var(--ink)}
+.menu{list-style:none;padding:0;max-width:60rem}
+.menu li{padding:1.1rem 0;transition:color .25s}
+.menu li[hidden]{display:none}
+.menu li:hover{color:var(--sun)}
+.menu .row{display:flex;align-items:baseline;gap:1rem}
+.menu .nm{font:700 clamp(1.4rem,3vw,2.1rem) var(--serif)}
+.menu .dots{flex:1;border-bottom:2px dotted rgba(246,239,226,.3);transform:translateY(-.3rem)}
+.menu .pr{font-weight:600;color:var(--sun);white-space:nowrap}
+.menu p{opacity:.7;font-size:.95rem}
+.pv{position:fixed;left:0;top:0;width:230px;aspect-ratio:4/5;border-radius:16px;overflow:hidden;pointer-events:none;opacity:0;z-index:40;box-shadow:0 20px 50px rgba(0,0,0,.5)}
+.pv img{width:100%;height:100%;object-fit:cover}
+@media(hover:none){.pv{display:none}}
+/* histoire */
+.quote{font:500 italic clamp(1.9rem,4.4vw,3.6rem)/1.15 var(--serif);max-width:24ch}
+.vals{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:2.5rem;margin-top:3.5rem}
+.val{border-top:2px solid currentColor;padding-top:1.2rem}
+.val .n{font:700 4.5rem/1 var(--serif);color:var(--clay)}
+.val h3{font:700 1.5rem var(--serif);margin:.3rem 0}
+.duo{display:grid;grid-template-columns:1fr 1fr;gap:4vw;align-items:center}
+.duo img{border-radius:22px;width:100%;aspect-ratio:4/5;object-fit:cover}
+.duo .big{overflow:hidden;border-radius:22px}
+.duo .big img{transform:scale(1.12);border-radius:0}
+@media(max-width:800px){.duo{grid-template-columns:1fr}}
+/* commande */
+.order{display:grid;grid-template-columns:1.3fr .9fr;gap:3rem;align-items:start}
+.oi{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1rem 0;border-bottom:1px solid rgba(246,239,226,.18)}
+.oi h3{font:700 1.3rem var(--serif)}
+.oi small{color:var(--sun);font-weight:600}
+.step{display:flex;align-items:center;gap:.8rem}
+.step button{width:42px;height:42px;border-radius:50%;border:2px solid var(--cream);background:none;color:var(--cream);font-size:1.4rem;line-height:1;cursor:pointer;transition:.2s}
+.step button:hover{background:var(--sun);border-color:var(--sun);color:var(--ink)}
+.q{min-width:1.6rem;text-align:center;font-weight:700}
+.sum{position:sticky;top:6rem;background:var(--cream);color:var(--ink);border-radius:24px;padding:1.8rem}
+.sum h2{font-size:2rem;margin-bottom:1rem}
+.sum ul{list-style:none;padding:0;margin-bottom:1rem;min-height:3rem}
+.sum li{padding:.2rem 0}
+.sum .empty{opacity:.55}
+.total{font:700 2.2rem var(--serif);margin-bottom:1rem}
+.sum input,.sum textarea{width:100%;padding:.8rem 1rem;border-radius:12px;border:2px solid rgba(20,17,14,.2);background:#fff;font:inherit;margin-bottom:.8rem}
+.sum .btn{width:100%}
+@media(max-width:860px){.order{grid-template-columns:1fr}.sum{position:static}}
+/* footer */
+footer{padding:3.5rem 5vw 6rem;display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:2rem}
+footer .logo{font-size:2.4rem}
+footer b{display:block;margin-bottom:.5rem;color:var(--sun)}
+footer a{display:block;opacity:.85}
+footer a:hover{color:var(--sun)}
+footer small{grid-column:1/-1;opacity:.6}
+.js .rv{opacity:0}
+
+/* ajouts */
+.hero{position:relative;overflow:hidden}
+.prog{position:fixed;left:0;top:0;height:4px;width:100%;background:var(--sun);transform:scaleX(0);transform-origin:0 50%;z-index:60}
+.cards{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1.5rem;margin-top:3rem}
+.gc{display:block;border-radius:22px;overflow:hidden;background:#201b15;color:var(--cream);box-shadow:0 14px 30px rgba(0,0,0,.25)}
+.paper .gc{background:var(--ink)}
+.gc img{width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .6s}
+.gc:hover img{transform:scale(1.07) rotate(-1.5deg)}
+.gc>div{padding:1rem 1.3rem 1.5rem}.gc h3{font:700 1.5rem var(--serif);color:var(--sun)}.gc p{opacity:.8;font-size:.95rem}
+.js .gc{opacity:0}
+.mq2{background:var(--leaf);color:var(--cream)}
+.tl{margin-top:3rem}.tl-i{display:grid;grid-template-columns:minmax(8rem,14rem) 1fr;gap:2rem;padding:1.8rem 0;border-top:2px solid rgba(246,239,226,.25)}
+.tl .tm{font:700 2.4rem var(--script);color:var(--sun)}.tl h3{font:700 1.6rem var(--serif)}.tl p{opacity:.8;max-width:38rem}
+@media(max-width:700px){.tl-i{grid-template-columns:1fr;gap:.4rem}}
+.faq{margin-top:2.5rem;max-width:52rem}
+details{border-top:2px solid currentColor;padding:1.3rem 0}
+summary{cursor:pointer;list-style:none;font:700 clamp(1.2rem,2.4vw,1.6rem) var(--serif);display:flex;justify-content:space-between;gap:1rem}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--sun);transition:transform .3s}
+.paper summary::after{color:var(--clay)}
+details[open] summary::after{transform:rotate(45deg)}
+details p{margin-top:.8rem;max-width:40rem;opacity:.85}
+details a{text-decoration:underline}
+section.duo{padding-block:clamp(4rem,10vw,9rem)}
+
+.sweet{position:relative;overflow:hidden}.sweet>*:not(.ps){position:relative;z-index:1}
+.ps{position:absolute;width:clamp(70px,9vw,130px);opacity:.9;pointer-events:none;filter:drop-shadow(0 10px 14px rgba(0,0,0,.4));z-index:0}
+.p1{left:2%;top:10%}.p2{right:3%;top:28%}.p3{left:4%;top:62%}.p4{right:2%;top:80%}
+@media(max-width:800px){.ps{display:none}}
+.mapwrap{border-radius:24px;overflow:hidden;box-shadow:0 20px 50px rgba(0,0,0,.25);border:4px solid var(--ink)}
+.mapwrap iframe{display:block;width:100%;height:min(60vh,480px);border:0}
+.rc{padding:1.8rem 1.5rem}.rc .em{display:block;font-size:3.2rem;line-height:1;margin-bottom:1rem;transition:transform .4s}
+.rc:hover .em{transform:scale(1.25) rotate(-8deg)}
+
+.ps{border-radius:50%;aspect-ratio:1;object-fit:cover}
+.ul{position:relative;display:inline-block}
+.ul svg{position:absolute;left:0;bottom:.02em;width:100%;height:.16em;overflow:visible}
+.ul path{fill:none;stroke:var(--sun);stroke-width:7;stroke-linecap:round}
+.bag{position:fixed;top:3px;left:0;font-size:22px;line-height:1;z-index:61;pointer-events:none;will-change:transform}
+.mie{position:fixed;width:7px;height:7px;margin:-3px 0 0 -3px;border-radius:40% 60% 50% 50%;pointer-events:none;z-index:200}
+.sig .big img{aspect-ratio:3/4;object-position:center}
+.hand{font:700 clamp(2rem,4vw,3rem) var(--script);color:var(--sun);transform:rotate(-3deg);transform-origin:left}
+
+
+/* =====================================================
+   MENU BURGER — correctif
+   Cause du bug : un élément avec backdrop-filter devient le « parent » de
+   ses enfants en position:fixed. Le menu plein écran se retrouvait donc
+   coincé dans la hauteur de l'en-tête et chevauchait logo et titre.
+   Ici le flou est porté par un pseudo-élément, pas par .nav.
+   ===================================================== */
+.nav,.nav.on{background:transparent;backdrop-filter:none;-webkit-backdrop-filter:none;isolation:isolate;min-height:76px}
+.nav::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(20,17,14,.96);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+html.menu-open,html.menu-open body{overflow:hidden}
+.page-title{padding-top:10.5rem;scroll-margin-top:7rem}
+@media(max-width:800px){
+  .nav{min-height:72px;padding:max(.7rem,env(safe-area-inset-top)) 4vw .7rem;gap:.65rem;flex-wrap:nowrap}
+  .nav .logo{position:relative;z-index:3;flex:1 1 auto;min-width:0;font-size:clamp(1.35rem,5.4vw,1.8rem);line-height:1;white-space:nowrap}
+  .nav .logo small{font-size:clamp(.48rem,1.9vw,.62rem);letter-spacing:.12em;line-height:1.4}
+  .nav .burger{display:block;position:relative;z-index:3;flex:0 0 auto;min-width:4.4rem;padding:.55rem 0;text-align:right;font-size:.95rem;white-space:nowrap}
+  .nav nav{position:fixed;top:0;left:0;right:0;bottom:auto;height:100vh;height:100dvh;z-index:2;display:flex;flex-direction:column;justify-content:center;align-items:center;gap:1.2rem;padding:6rem 1.5rem 2rem;background:var(--ink);font:700 clamp(1.7rem,7.5vw,2.3rem) var(--serif);opacity:0;visibility:hidden;pointer-events:none;transform:translateY(-14px);transition:opacity .3s,transform .3s,visibility 0s linear .3s}
+  .nav.open nav{opacity:1;visibility:visible;pointer-events:auto;transform:none;transition:opacity .3s,transform .3s,visibility 0s}
+  .nav nav a{display:block;padding:.25rem 0}
+  .nav>.btn{display:none}
+  .page-title{padding-top:8.5rem;padding-bottom:2rem}
+  .page-title h1{font-size:clamp(2.8rem,12vw,4.2rem);line-height:.98;overflow-wrap:anywhere}
+  .fab{z-index:20;bottom:max(1rem,env(safe-area-inset-bottom))}
+}
+@media(max-width:380px){.nav{padding-inline:3.5vw}.nav .logo{font-size:1.25rem}.nav .logo small{letter-spacing:.08em;font-size:.46rem}.page-title{padding-top:8rem}}
+@media(prefers-reduced-motion:reduce){.nav nav{transition:none!important}html{scroll-behavior:auto}}
